@@ -807,7 +807,7 @@ static void Main(string[] args)
 {
     ListaAlumnos listaAlumnos = new ListaAlumnos();
 
-    Interfaz.RellenarConDatosEjemplo(listaAlumnos);
+    FuncionesInterfaz.RellenarConDatosEjemplo(listaAlumnos);
 
     int opc;
 
@@ -827,7 +827,7 @@ static void Main(string[] args)
                 FuncionesInterfaz.LeerDatosAlumnoConObjeto(listaAlumnos);
                 break;
             case 4:
-                string nombre = Interfaz.LeerNombre();
+                string nombre = FuncionesInterfaz.LeerNombre();
                 Console.WriteLine();
                 Console.WriteLine(listaAlumnos.MostrarDatosAlumno(nombre));                        
                 break;
@@ -935,7 +935,7 @@ En la clase Interfaz:
 ```csharp
     static public void CumpleañosDeAlumno(ListaAlumnos listaAlumnos)
     {
-        string nombre = Interfaz.LeerNombre();
+        string nombre = FuncionesInterfaz.LeerNombre();
 
         Alumno alumno = listaAlumnos.DevolverAlumno(nombre);
 
@@ -951,14 +951,16 @@ En la clase Interfaz:
     }
 ```
 
-<hr>
-**Atención**
+<br>
 
-A partir de la versión 8.0 de C# para que un objeto sea nullable debemos ponerle `?`:
-
-`Alumno ? alumno`
-
-Por ejemplo, si desarrollamos un proyecto de Windows Forms o de Consola (que no sean .NET Framework).
-
-"Pero eso es otra historia y debe ser contada en otra ocasión".
-<hr>
+>
+> **Atención**
+>
+> A partir de la versión 8.0 de C# para que un objeto sea nullable debemos ponerle `?`:
+>
+> `Alumno ? alumno`
+> 
+> Por ejemplo, si desarrollamos un proyecto de Windows Forms o de Consola (que no sean .NET Framework).
+> 
+> "Pero eso es otra historia y debe ser contada en otra ocasión".
+>
